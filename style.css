@@ -23,6 +23,11 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  /*disable selection*/
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
 }
 
 .container {
@@ -50,12 +55,7 @@ body {
   bottom: 20px;
   left: 20px;
   margin: 0;
-  opacity: 0;
-  /*disable selection*/
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;    
+  opacity: 0;  
 }
 
 .panel.active {
