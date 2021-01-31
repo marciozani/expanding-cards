@@ -1,17 +1,12 @@
 let panels = document.querySelectorAll('.panel');
 
-panels.forEach(panel => {
-  console.log('registered');
-  panel.addEventListener('click', this.toogleActive);
-});
+panels.forEach(panel => panel.addEventListener('click', (event) => {
+  clearActive(panels);
+  setActive(event.target);
+}));
 
-function toogleActive(event) {
-  panels.forEach(panel => {
-    console.log(panel.className);
-    panel.classList.remove('active');
-  });
+const clearActive = (elements) =>
+  elements.forEach(element => element.classList.remove('active'));
 
-  const active = event.target;
-  active.classList.add('active');
-}
-
+const setActive = (element) =>
+  element.classList.add('active');
